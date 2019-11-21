@@ -1,3 +1,4 @@
+// General styles, buttons and head, parragraph
 header {
     position: fixed;
     z-index: 99!important;
@@ -10,13 +11,150 @@ header {
     transition: top .2s ease 0s;
 } 
 
-h1,h2,h3,h4,h5,h6,span,p,small,ul {
+h1,h2,h3,h4,h5,h6,span,p,small,ul,a {
     margin: 0;
     font-family: 'Barlow', sans-serif;
 }
+h2,
+h4 {
+    color: $white;
+}
+
+h2 {
+    font-size: 19px;
+    font-weight: bold;
+
+    @include responsive-width($sm-viewport) {
+        font-size: 28px;
+    }
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: bold;
+    color: $color-light-blue;
+
+    @include responsive-width($sm-viewport) {
+        font-size: 40px;
+        line-height: 38px;
+    }
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 100; 
+    margin-top: 0;
+
+    @include responsive-width($sm-viewport) {
+        margin-top: 15px;
+    }   
+}
+
+.container {
+    height: 450px;
+    margin-top: 60px;
+    padding: 50px 0;
+    position: relative;
+    box-sizing: border-box;
+    background-color: $color-blue;
+    
+    @include responsive-width($md-viewport) {
+        margin-top: 80px;
+    }
+}
+
+.container > div.principalcontent {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    @include responsive-width($xxs-viewport) {
+        width: 100%;
+    }
+
+    @include responsive-width($sm-viewport) {
+        margin: 0 auto;
+        width: $sm-container;
+    }
+
+    @include responsive-width($md-viewport) {
+        margin: 0 auto;
+        width: $md-container;
+    }
+
+    @include responsive-width($lg-viewport) {
+        margin: 0 auto;
+        width: $lg-container;
+    }        
+}
+
+br {
+    display: none;
+    
+    @include responsive-width(540px) {
+        display: block;
+    }
+}
+
+.container {
+    background-image: url(../../img/vector-banner-mob.png);
+    background-position-x: left;
+    background-position-y: 20%;
+
+    @include responsive-width(540px) {
+        background-image: url(../../img/vector-banner.png);
+        background-position-x: 110px;
+        background-position-y: unset;
+        background-repeat: no-repeat;
+    }
+
+    @include responsive-width(600px) {
+        background-image: url(../../img/vector-banner.png);
+        background-position-x: 400px;
+        background-position-y: unset;
+        background-repeat: no-repeat;
+    }
+
+    @include responsive-width(1000px) {
+        background-position-x: 470px;
+    }
+
+    @include responsive-width($md-viewport) {
+        background-position-x: 370px;
+    }
+
+    @include responsive-width($lg-md-viewport) {
+        background-position-x: 320px;
+    }
+
+    @include responsive-width($lg-viewport) {
+        background-position-x: 520px;
+    }  
+
+    @include responsive-width(1530px) {
+        background-position-x: 600px;
+    }   
+
+    @include responsive-width(1700px) {
+        background-position-x: 650px;
+    }   
+
+    @include responsive-width(1800px) {
+        background-position-x: 810px;
+    } 
+}
+
 
 .e-button-buy {
+    margin-top: 21px;
     text-align: center;
+
+    @include responsive-width($sm-viewport) {
+        text-align: left;
+    }    
 }
 
 .btn-buy {
@@ -41,9 +179,49 @@ h1,h2,h3,h4,h5,h6,span,p,small,ul {
     text-align: center;
     transition: all .2s ease 0s;
     vertical-align: top;
+
+    @include responsive-width($sm-viewport) {
+        margin: 21px 0 0 0;
+    }
 }
 
 .e-button-buy small {
     font-size: 10px;
     color: $color-light-blue;
+
+    @include responsive-width($sm-viewport) {
+        display: block;
+        margin: 70px 0 0 0;
+    }
+}
+
+
+.hidden-xs {
+    display: none;
+
+    @include responsive-width($xxs-viewport) {
+        display: none;
+    }
+    
+    @include responsive-width($xs-viewport) {
+        display: none;
+    }
+
+    @include responsive-width($sm-viewport) {
+        display: block;
+    }
+}
+
+.hidden-lg {
+    @include responsive-width($xxs-viewport) {
+        display: block;
+    }
+    
+    @include responsive-width($xs-viewport) {
+        display: block;
+    }
+
+    @include responsive-width($sm-viewport) {
+        display: none;
+    }
 }
