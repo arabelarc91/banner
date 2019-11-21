@@ -102,7 +102,7 @@ br {
 .container {
     background-image: url(../../img/vector-banner-mob.png);
     background-position-x: left;
-    background-position-y: 20%;
+    background-position-y: 22%;
 
     @include responsive-width(540px) {
         background-image: url(../../img/vector-banner.png);
