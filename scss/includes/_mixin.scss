@@ -1,0 +1,73 @@
+@mixin responsive-width($media) {
+    @media only screen and (min-width: $media) { @content; }
+}
+
+.slick-home {
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    height: 450px;
+    padding: 80px 0;
+    margin-top: 60px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: $color-blue;
+
+    @include responsive-width($md-viewport) {
+        margin-top: 80px;
+    }
+}
+
+.container > div.principalcontent {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    @include responsive-width($xxs-viewport) {
+        width: 100%;
+    }
+
+    @include responsive-width($sm-viewport) {
+        margin: 0 auto;
+        width: $sm-container;
+    }
+
+    @include responsive-width($md-viewport) {
+        margin: 0 auto;
+        width: $md-container;
+    }
+
+    @include responsive-width($lg-viewport) {
+        margin: 0 auto;
+        width: $lg-container;
+    }        
+}
+
+br {
+    display: none;
+    
+    @include responsive-width(540px) {
+        display: block;
+    }
+}
+
+.hidden-xs {
+    @include responsive-width($xxs-viewport) {
+        display: none;
+    }
+    
+    @include responsive-width($xs-viewport) {
+        display: none;
+    }
+}
+
+.hidden-lg {
+    @include responsive-width($sm-viewport) {
+        display: none;
+    }
+}

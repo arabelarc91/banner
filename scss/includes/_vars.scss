@@ -1,0 +1,60 @@
+//== Font Family
+$font-family: 'Barlow', sans-serif;
+
+$font-default: 14px;
+$font-h2: 25px;
+
+$letter-spacing: normal;
+
+//$img-path: '/images/';
+//$img-path: '/static/marketing/images/';
+$img_path: '/wp-content/uploads/2019/';
+
+
+// Colors
+$black: #000;
+
+// Blues and Skyblues
+   $blue: #0154a0;
+   $color-blue: #004FB9;
+   $blue-light: #B2CBE2;
+   $entel-celeste: #6798c6;
+   $color-light-blue: #00B9EB;
+   $color-gray-blue: #B1EAF8;
+
+// Green
+   $entel-aqua: #68d9d0;
+
+//Whites and grays
+   $white: #fff;
+   $gray: #e1e4eb;
+   $gray-header : #f9fafc;
+   $gray-line: #DDDDDD;
+
+// Orange
+   $orange: #ff6702;
+   $orange-tlv: #f86606;
+   $orange-light: #ff7b00;
+
+// Red
+   $red: red;
+   $error: #e40000;
+   $color-red: #C72127;
+
+// Grays
+   $gray-light2: #f0f0f0;
+
+   
+// Breakpoints
+$xxs-viewport: 325px;
+$xs-viewport: 460px;
+$sm-viewport: 768px;
+$md-viewport: 992px;
+$lg-md-viewport: 1024px;
+$lg-viewport: 1200px;
+
+// Container
+$sm-container: 750px !important;
+$md-container: 970px !important;
+$lg-container: 1270px !important;
+
