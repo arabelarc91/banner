@@ -67,7 +67,7 @@ h4 {
         margin: 0 auto;
         background-color: $color-blue;
         position: absolute;
-        transform: translate(-50%, -39%);
+        transform: translate(-41%, -38%);
 
         @include responsive-width(540px) {
             transform: translate(-26%, -28%);
