@@ -17,17 +17,26 @@
         }
 
         @media screen and (max-width: 500px){
-            margin-left: 14%;
+            margin-left: 25%;
         }
 
-        @media (min-width: 590px) and (max-width: 690px) {
-            margin-left: 0; 
+        @media (min-width: 640px) and (max-width:800px) {
+            margin-left: 4px; 
+
             img {
                 max-width: 100%;
             }    
         }
 
-        @media (min-width: 700px) {
+        @media (min-width: 924px) {
+            margin-left: 4%;
+
+            img {
+                max-width: 100%;
+            }   
+        }
+
+        @media (min-width: 1024px) {
             margin-left: 14%;
 
             img {
@@ -129,6 +138,10 @@
                 position: relative;
                 color: $orange;
             }
+
+            @include responsive-width($sm-viewport) {
+                font-size: 12px;
+            }
         }
     }
 
@@ -144,7 +157,7 @@
             margin-top: 7px;
         }
 
-        @include responsive-width(600px) {
+        @include responsive-width(768px) {
             top: 0;
             right: 0;
             position: absolute;

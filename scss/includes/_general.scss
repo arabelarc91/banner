@@ -15,6 +15,7 @@ h1,h2,h3,h4,h5,h6,span,p,small,ul,a {
     margin: 0;
     font-family: 'Barlow', sans-serif;
 }
+
 h2,
 h4 {
     color: $white;
@@ -54,12 +55,28 @@ h4 {
     height: 450px;
     margin-top: 60px;
     padding: 50px 0;
+    overflow: hidden;
     position: relative;
     box-sizing: border-box;
     background-color: $color-blue;
-    
-    @include responsive-width($md-viewport) {
-        margin-top: 80px;
+
+    picture {
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        margin: 0 auto;
+        background-color: $color-blue;
+        position: absolute;
+        transform: translate(-50%, -39%);
+
+        @include responsive-width(540px) {
+            transform: translate(-26%, -28%);
+        }
+
+        @include responsive-width($sm-viewport) {
+            transform: translate(-8%, -30%);
+            margin-top: 80px;
+        }
     }
 }
 
@@ -72,7 +89,7 @@ h4 {
     transform: translate(-50%, -50%);
 
     @include responsive-width($xxs-viewport) {
-        width: 100%;
+        width: 500px;
     }
 
     @include responsive-width($sm-viewport) {
@@ -83,12 +100,7 @@ h4 {
     @include responsive-width($md-viewport) {
         margin: 0 auto;
         width: $md-container;
-    }
-
-    @include responsive-width($lg-viewport) {
-        margin: 0 auto;
-        width: $lg-container;
-    }        
+    }      
 }
 
 br {
@@ -98,55 +110,6 @@ br {
         display: block;
     }
 }
-
-.container {
-    background-image: url(../../img/vector-banner-mob.png);
-    background-position-x: left;
-    background-position-y: 22%;
-
-    @include responsive-width(540px) {
-        background-image: url(../../img/vector-banner.png);
-        background-position-x: 110px;
-        background-position-y: unset;
-        background-repeat: no-repeat;
-    }
-
-    @include responsive-width(600px) {
-        background-image: url(../../img/vector-banner.png);
-        background-position-x: 400px;
-        background-position-y: unset;
-        background-repeat: no-repeat;
-    }
-
-    @include responsive-width(1000px) {
-        background-position-x: 470px;
-    }
-
-    @include responsive-width($md-viewport) {
-        background-position-x: 370px;
-    }
-
-    @include responsive-width($lg-md-viewport) {
-        background-position-x: 320px;
-    }
-
-    @include responsive-width($lg-viewport) {
-        background-position-x: 520px;
-    }  
-
-    @include responsive-width(1530px) {
-        background-position-x: 600px;
-    }   
-
-    @include responsive-width(1700px) {
-        background-position-x: 650px;
-    }   
-
-    @include responsive-width(1800px) {
-        background-position-x: 810px;
-    } 
-}
-
 
 .e-button-buy {
     margin-top: 21px;
