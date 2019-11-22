@@ -59,25 +59,6 @@ h4 {
     position: relative;
     box-sizing: border-box;
     background-color: $color-blue;
-
-    picture {
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        margin: 0 auto;
-        background-color: $color-blue;
-        position: absolute;
-        transform: translate(-41%, -38%);
-
-        @include responsive-width(540px) {
-            transform: translate(-26%, -28%);
-        }
-
-        @include responsive-width($sm-viewport) {
-            transform: translate(-8%, -30%);
-            margin-top: 80px;
-        }
-    }
 }
 
 .container > div.principalcontent {
