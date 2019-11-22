@@ -28,16 +28,25 @@ h2 {
     @include responsive-width($sm-viewport) {
         font-size: 28px;
     }
-}
+    
+    span {
+        font-size: 17px;
+        line-height: 12px;
+        font-weight: bold;
+        color: $color-light-blue;
 
-h3 {
-    font-size: 17px;
-    font-weight: bold;
-    color: $color-light-blue;
+        br {
+            display: none;
+        }
+    
+        @include responsive-width($sm-viewport) {
+            font-size: 40px;
+            line-height: 38px;
 
-    @include responsive-width($sm-viewport) {
-        font-size: 40px;
-        line-height: 38px;
+            br {
+                display: block;
+            }
+        }
     }
 }
 
@@ -84,13 +93,7 @@ h4 {
     }      
 }
 
-br {
-    display: none;
-    
-    @include responsive-width(540px) {
-        display: block;
-    }
-}
+
 
 .e-button-buy {
     margin-top: 21px;

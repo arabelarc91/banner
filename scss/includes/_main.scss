@@ -7,7 +7,7 @@
         margin: 0 auto;
         background-color: $color-blue;
         position: absolute;
-        transform: translate(-41%, -38%);
+        transform: translate(-70%, -33%);
 
         @include responsive-width(540px) {
             transform: translate(-26%, -28%);
@@ -26,14 +26,14 @@
     overflow: hidden;
 
     .slick-slide {
-        .e-button-buy {
+        .animated {
             opacity: 0;
             transform: translateY(20px);
             transition: all .5s ease 0s;
         }
 
         &.slick-active {
-            .e-button-buy {
+            .animated {
                 transform: translate(0);
                 opacity: 1;
                 transition-delay: .3s;
