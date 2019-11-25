@@ -7,14 +7,25 @@
         margin: 0 auto;
         background-color: $color-blue;
         position: absolute;
-        transform: translate(-70%, -33%);
+
+        @media screen and (max-width: 320px){
+            transform: translate(-70%, -33%);
+        }
+
+        @include responsive-width(375px) {
+            transform: translate(-70%, -32%);
+        }
+
+        @include responsive-width(425px) {
+            transform: translate(-70%, -30%);
+        }       
 
         @include responsive-width(540px) {
             transform: translate(-26%, -28%);
         }
 
         @include responsive-width($sm-viewport) {
-            transform: translate(-8%, -30%);
+            transform: translate(-8%, -33%);
             margin-top: 80px;
         }
     }    
@@ -159,6 +170,13 @@
         @include responsive-width($xxs-viewport) {
             margin-left: 7px;
         } 
+
+        @include responsive-width($sm-viewport) {
+            .btn-buy {
+                margin-top: 0;
+                position: absolute;
+            }
+        }
     }
 
     &__plan {
