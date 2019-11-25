@@ -133,9 +133,14 @@
         small {
             font-size: 17px;
             font-weight: bold;
-            color: $color-light-blue;
+            color: $color-blue;
+            
+            &:nth-of-type(2) { 
+                color: $color-light-blue;
+            }
 
             @include responsive-width($sm-viewport) {
+
                 &:nth-of-type(2) {
                     position: absolute;
                     width: 40px;
